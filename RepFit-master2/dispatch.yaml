@@ -1,0 +1,4 @@
+application:
+dispatch:
+- url: "www.repfit.jp/*"
+  module: default

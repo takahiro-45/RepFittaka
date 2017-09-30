@@ -1,0 +1,129 @@
+/* ------------------------------------ *\
+HTML5 Reset
+\* ------------------------------------ */
+
+html, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, address, cite, del,
+em, img, small, strong, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure,
+footer, header, menu, nav, section, time, mark, audio, video, details, summary {
+	padding: 0;
+	margin: 0;
+	font-size: 100%;
+	font-weight: normal;
+	vertical-align: baseline;
+	background: transparent;
+	border: 0;
+}
+
+article, aside, figure, footer, header, nav, section, details, summary {
+	display: block;
+}
+
+/* Handle box-sizing while better addressing child elements:
+http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+html {
+	min-width: 300px;
+	box-sizing: border-box;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", "Hiragino Sans", Meiryo, sans-serif;
+	font-size: 16px;
+	color: var(--color-mono-darker);
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+/* consider resetting the default cursor: https://gist.github.com/murtaugh/5247154
+* Responsive images and other embedded objects
+* if you don't have full control over `img` tags (if you have to overcome attributes), consider adding height: auto */
+img,
+object,
+embed {
+	max-width: 100%;
+}
+
+img {
+	vertical-align: bottom;
+}
+
+ul {
+	list-style: none;
+}
+
+a {
+	padding: 0;
+	margin: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+}
+
+/* tables still need cellspacing="0" in the markup */
+table {
+	font: 100%;
+	font-size: inherit;
+	line-height: 1.5;
+	border-spacing: 0;
+	border-collapse: collapse;
+}
+
+th, td {
+	font-weight: normal;
+	vertical-align: top;
+}
+
+input,
+select {
+	vertical-align: middle;
+}
+
+pre {
+	word-wrap: break-word; /* IE */
+	white-space: pre; /* CSS2 */
+	white-space: pre-wrap; /* CSS 2.1 */
+	white-space: pre-line; /* CSS 3 (and 2.1 as well, actually) */
+}
+
+input[type="radio"] {
+	vertical-align: text-bottom;
+}
+
+input[type="checkbox"] {
+	vertical-align: bottom;
+}
+
+select,
+input,
+textarea {
+	font: 99% sans-serif;
+}
+
+b, strong {
+	font-weight: bold;
+}
+
+/* hand cursor on clickable elements */
+label,
+input[type=button],
+input[type=submit],
+input[type=file],
+button {
+	cursor: pointer;
+}
+
+/* Webkit browsers add a 2px margin outside the chrome of form elements */
+button,
+input,
+select,
+textarea {
+	margin: 0;
+}
+
+/* make buttons play nice in IE */
+button,
+input[type=button] {
+	width: auto;
+	overflow: visible;
+}

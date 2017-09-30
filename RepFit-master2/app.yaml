@@ -1,0 +1,55 @@
+application: repfit1
+version: main
+runtime: go
+api_version: go1
+
+skip_files:
+- .git
+- .editorconfig
+- .eslintrc
+- .stylelintrc
+- .kssrc.json
+- ^(.*/)?.*\.DS_Store$
+- node_modules/*
+- static/assets/*
+- ^static/(.*/)+(.+).less$
+- ^static/(.*/)+(.+).scss$
+- ^static/(.*/)+(.+).map$
+- ^static/(.*/)+(.+).md$
+- ^static/(.*/)+(.+).yml$
+- ^static/(.*/)+(.+).php$
+- ^static/(.*/)+(.+).rb$
+- ^static/(.*/)+(.+).ps1$
+- ^static/(.*/)+(.+).back$
+- ^static/(.*/)+(.+).nuspec$
+- ^static/(.*/)+(.+).markdown$
+- ^static/(.*/)+.*ignore$
+- ^static/(.*/)+.*rc$
+- ^static/(.*/)+LICENSE$
+- ^static/(.*/)+Makefile$
+
+handlers:
+- url: /.well-known/pki-validation/fileauth.txt
+  static_files: static/files/fileauth.txt
+  upload: static/files/fileauth.txt
+  secure: always
+  login: admin
+
+# 静的ファイルの設定
+- url: /(.*\.(css|eot|gif|html|ico|jpg|js|json|less|map|otf|png|scss|svg|ttf|txt|woff|woff2|pdf|mp4|ogv|webm))$
+  static_files: static/\1
+  upload: static/(.*)
+  secure: always
+  login: admin
+
+- url: /
+  static_files: templates/top/top.html
+  upload: templates/top/top.html
+  secure: always
+  login: admin
+
+- url: /thanks
+  static_files: templates/top/thanks.html
+  upload: templates/top/thanks.html
+  secure: always
+  login: admin

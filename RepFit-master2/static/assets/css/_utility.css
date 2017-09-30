@@ -1,0 +1,43 @@
+/* ------------------------------------ *\
+Utility
+\* ------------------------------------ */
+
+.u-truncate {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.u-cf::after {
+	display: block;
+	clear: both;
+	content: "";
+}
+
+.u-tx-r { text-align: right; }
+.u-tx-c { text-align: center; }
+.u-tx-l { text-align: left; }
+.u-va-m { vertical-align: middle; }
+.u-va-b { vertical-align: bottom; }
+.u-fw-b { font-weight: bold; }
+
+.u-fs-xs { font-size: var(--font-xsmall); }
+.u-fs-sm { font-size: var(--font-small); }
+.u-fs-md { font-size: var(--font-medium); }
+.u-fs-lg { font-size: var(--font-large); }
+.u-fs-xl { font-size: var(--font-xlarge); }
+
+.u-mb-xs { margin-bottom: var(--space-xsmall); }
+.u-mb-sm { margin-bottom: var(--space-small); }
+.u-mb-md { margin-bottom: var(--space-medium); }
+.u-mb-lg { margin-bottom: var(--space-large); }
+.u-mb-xl { margin-bottom: var(--space-xlarge); }
+.u-mb-xxl { margin-bottom: var(--space-xxlarge); }
+
+.u-btn-disabled{
+	cursor: not-allowed;
+	pointer-events: none;
+	filter: alpha(opacity=65);
+	box-shadow: none;
+	opacity: .65;
+}
