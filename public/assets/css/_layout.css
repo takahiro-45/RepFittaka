@@ -1,0 +1,109 @@
+/* ------------------------------------ *\
+Layout ref: github.com/1000ch/grd
+\* ------------------------------------ */
+
+.l-grid {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+/* A Fallback for Android Browser: you can write like this only when l-cell's modifier is `-xs-12` */
+.l-grid.-wrap { display: block; }
+
+.l-grid.-top { align-items: flex-start; }
+.l-grid.-middle { align-items: center; }
+.l-grid.-bottom { align-items: flex-end; }
+.l-grid.-stretch { align-items: stretch; }
+.l-grid.-baseline { align-items: baseline; }
+.l-grid.-left { justify-content: flex-start; }
+.l-grid.-center { justify-content: center; }
+.l-grid.-right { justify-content: flex-end; }
+.l-grid.-between { justify-content: space-between; }
+.l-grid.-around { justify-content: space-around; }
+
+.l-cell {
+	box-sizing: border-box;
+	flex-shrink: 0;
+}
+
+.l-cell.-fill {
+	width: 0;
+	min-width: 0;
+	flex-grow: 1;
+}
+
+.l-cell.-xs-1 { width: 8.33%; }
+.l-cell.-xs-2 { width: 16.66%; }
+.l-cell.-xs-3 { width: 25%; }
+.l-cell.-xs-4 { width: 33.33%; }
+.l-cell.-xs-5 { width: 41.66%; }
+.l-cell.-xs-6 { width: 50%; }
+.l-cell.-xs-7 { width: 58.33%; }
+.l-cell.-xs-8 { width: 66.66%; }
+.l-cell.-xs-9 { width: 75%; }
+.l-cell.-xs-10 { width: 83.33%; }
+.l-cell.-xs-11 { width: 91.66%; }
+.l-cell.-xs-12 { width: 100%; }
+
+
+/*　768px以上　*/
+@media screen and (min-width: 769px) {
+	.l-grid.-wrap { display: flex; }
+
+	.l-cell.-sm-auto { width: auto; }
+	.l-cell.-sm-1 { width: 8.33%; }
+	.l-cell.-sm-2 { width: 16.66%; }
+	.l-cell.-sm-3 { width: 25%; }
+	.l-cell.-sm-4 { width: 33.33%; }
+	.l-cell.-sm-5 { width: 41.66%; }
+	.l-cell.-sm-6 { width: 50%; }
+	.l-cell.-sm-7 { width: 58.33%; }
+	.l-cell.-sm-8 { width: 66.66%; }
+	.l-cell.-sm-9 { width: 75%; }
+	.l-cell.-sm-10 { width: 83.33%; }
+	.l-cell.-sm-11 { width: 91.66%; }
+	.l-cell.-sm-12 { width: 100%; }
+}
+
+
+.l-main {
+	position: relative;
+	max-width: 500px;
+	padding: 10px 0;
+	margin: 0 auto;
+}
+
+/* @media screen and (--mq-desktop) {
+.l-main {
+position: relative;
+max-width: 1000px;
+padding: 30px 0;
+margin: 0 auto;
+}
+} */
+
+.l-placeholder {
+	position: relative;
+	background-color: var(--color-mono-lighter);
+}
+.l-placeholder::before {
+	display: block;
+	padding-top: 100%;
+	content: "";
+}
+
+.l-adjuster{
+	padding: 0 20px;
+}
+
+.l-adjuster-small{
+	padding: 0 16px;
+}
+
+.l-adjuster-large{
+	padding: 0 24px;
+}
+
+.l-adjuster.-tiny {
+	padding: 0 8px;
+}

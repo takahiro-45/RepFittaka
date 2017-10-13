@@ -1,0 +1,47 @@
+/* ------------------------------------ *\
+Variables
+\* ------------------------------------ */
+
+:root {
+	--space-xsmall: 5px;
+	--space-small: 	10px;
+	--space-medium: 15px;
+	--space-large: 	30px;
+	--space-xlarge: 40px;
+	--space-xxlarge: 65px;
+
+	--font-xsmall: 	0.75rem;		/* 12px */
+	--font-small: 	0.88rem;		/* 14px */
+	--font-medium: 	1rem;				/* 16px */
+	--font-large: 	1.13rem;		/* 18px */
+	--font-xlarge: 	1.25rem;		/* 20px */
+
+	--color-mono-white: 	#fff;
+	--color-mono-lighter: #F9F9F9;			/* Backgorund */
+	--color-mono-dark: 		#000000;			/* Text */
+
+	--duration: 300ms;
+	--easeInOutCubic: cubic-bezier(0.645, 0.045, 0.355, 1); /* easeInOutCubic */
+}
+
+@custom-media --mq-desktop (max-width: 768px);
+@custom-media --mq-high-res (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx);
+
+
+@keyframes fade_in {
+	from { opacity: 0; }
+	to { opacity: 1; }
+}
+
+@keyframes fade_out {
+	from { opacity: 1; }
+	to { opacity: 0; }
+}
+
+@keyframes slideshow{
+	0% { opacity: 0; }
+	11.11% { opacity: 1; }
+	33.33% { opacity: 1; }
+	44.44% { opacity: 0; }
+	100% { opacity: 0; }
+}
